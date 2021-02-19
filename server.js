@@ -6,7 +6,7 @@ const app = express();
 
 app.use(morgan("dev"));
 app.use(helmet());
-app.use(express.static(join(__dirname, "public")));
+app.use(express.static(join(__dirname, "assets/custom")));
 
 app.get("/auth_config.json", (req, res) => {
   res.sendFile(join(__dirname, "auth_config.json"));
